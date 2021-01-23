@@ -14,15 +14,15 @@ export default function Home() {
         <h1 className="text-sm text-gray-400">It's free and only takes a minute.</h1>
       </div>
       <div className="flex items-center justify-center pb-52">
-        <form action="" className="p-4 border-gray-400 rounded-md">
+        <form action="" className="p-5 border border-gray-400 rounded-md">
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" for="name">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
                 Full Name
             </label>
             <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Full name" />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" for="grid-state">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="grid-state">
                 Type
               </label>
             <div className="relative">
@@ -37,13 +37,13 @@ export default function Home() {
             </div>
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" for="email">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
                 Email
             </label>
             <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="your.email@example.com" />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" for="password">
+            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
                 Password
             </label>
             <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="pw" type="password" />
