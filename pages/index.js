@@ -14,6 +14,11 @@ const Home = () => {
   const [password, setPassword] = useState("");
   const [agree, setAgree] = useState(false);
 
+  const validateEmail = () => {
+    const regexString = /\S+@\S+\.\S+/;
+    return regexString.test(email);
+  };
+
   const createAccount = useCallback(async () => {
     try {
       if (fullName === "") {
@@ -27,6 +32,9 @@ const Home = () => {
       }
       if (password === "") {
         throw new Error("Please provide your password.");
+      }
+      if (validateEmail(email) === false) {
+        throw new Error("Please enter a valid email.");
       }
       await base("User Table").create([
         {
@@ -148,6 +156,7 @@ const Home = () => {
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="pw"
               type="password"
+              maxlength="128"
             />
           </div>
           <div className="mb-4">
