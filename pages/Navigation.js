@@ -13,11 +13,8 @@ const Navigation = () => {
         <div className="max-w-full px-2 sm:px-6 lg:px-8">
           <div className="relative flex items-center justify-between h-16">
             <div className="flex-1 flex items-center sm:items-stretch sm:justify-start">
-              <div
-                className="flex-shrink-0 flex items-center font-semibold text-white"
-                onClick={() => set_sidebar(!sidebar)}
-              >
-                <FontAwesomeIcon icon={faBars} size="1x" />
+              <div className="flex-shrink-0 flex items-center font-semibold text-white">
+                <FontAwesomeIcon icon={faBars} />
                 <div className="pl-5">Hello, Blessly!</div>
               </div>
             </div>
