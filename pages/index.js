@@ -79,7 +79,7 @@ const Home = () => {
           It's free and only takes a minute.
         </h1>
       </div>
-      <div className="flex items-center justify-center pb-52">
+      <div className="flex items-center justify-center pb-20">
         <form action="" className="p-5 border border-gray-400 rounded-md">
           <div className="mb-4">
             <label
@@ -182,6 +182,11 @@ const Home = () => {
             </button>
           </div>
         </form>
+      </div>
+      <div className="flex justify-center">
+        <h1 className="text-sm text-gray-400">
+          Already have an account? <a href="/Login">Click here to sign in</a>.
+        </h1>
       </div>
     </div>
   );
