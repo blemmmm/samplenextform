@@ -185,7 +185,11 @@ const Home = () => {
       </div>
       <div className="flex justify-center">
         <h1 className="text-sm text-gray-400">
-          Already have an account? <a href="/Login">Click here to sign in</a>.
+          Already have an account?{" "}
+          <a href="/Login" className="hover:text-blue-400">
+            Click here to sign in
+          </a>
+          .
         </h1>
       </div>
     </div>
