@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
+i:active::before {
+    transform: rotate(90deg);
+  }
+  
+  i:before {
+    display: inline-block;/* mandatory to be able to use transform */
+    transition: 1ms all;
+  }
 @tailwind utilities;

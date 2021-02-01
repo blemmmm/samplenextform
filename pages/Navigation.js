@@ -4,6 +4,8 @@ import Link from "next/link";
 import Head from "next/head";
 
 const Navigation = () => {
+  const [sidebar, set_sidebar] = useState(false);
+  console.log(sidebar);
   return (
     <div>
       <Head>
@@ -15,7 +17,10 @@ const Navigation = () => {
           <div className="flex items-center justify-between h-16">
             <div className="px-1">
               <div className="flex items-center justify-start text-white font-semibold">
-                <i className="far fa-bars" />
+                <i
+                  className="far fa-bars"
+                  onClick={() => set_sidebar(!sidebar)}
+                />
                 <div className="pl-5">Hello, Blessly!</div>
               </div>
             </div>
@@ -32,29 +37,34 @@ const Navigation = () => {
             </div>
           </div>
         </div>
-        <div>
-          <div className="h-full fixed z-20 bg-gray-800 bg-opacity-75 left-0 p-2 w-64 shadow-md lg:shadow-lg overflow-y-auto">
-            <div className="py-10 px-20 flex items-center justify-between hover:bg-gray-600 text-white">
-              <Link href="/">Link 1</Link>
-            </div>
-            <hr />
-            <div className="py-10 px-20 flex items-center justify-between hover:bg-gray-600 text-white">
-              <Link href="/">Link 2</Link>
-            </div>
-            <hr />
-            <div className="py-10 px-20 flex items-center justify-between hover:bg-gray-600 text-white">
-              <Link href="/">Link 3</Link>
-            </div>
-            <hr />
-            <div className="py-10 px-20 flex items-center justify-between hover:bg-gray-600 text-white">
-              <Link href="/">Link 4</Link>
-            </div>
-            <hr />
-            <div className="py-10 px-20 flex items-center justify-between hover:bg-gray-600 text-white">
-              <Link href="/">Link 5</Link>
+        {sidebar === true && (
+          <div
+            className="transition ease-linear duration-1000"
+            onClick={() => set_sidebar(false)}
+          >
+            <div className="h-full fixed z-20 bg-gray-800 bg-opacity-75 left-0 p-2 w-64 shadow-md lg:shadow-lg overflow-y-auto">
+              <div className="py-10 px-20 flex items-center justify-between hover:bg-gray-600 text-white">
+                <Link href="/">Link 1</Link>
+              </div>
+              <hr />
+              <div className="py-10 px-20 flex items-center justify-between hover:bg-gray-600 text-white">
+                <Link href="/">Link 2</Link>
+              </div>
+              <hr />
+              <div className="py-10 px-20 flex items-center justify-between hover:bg-gray-600 text-white">
+                <Link href="/">Link 3</Link>
+              </div>
+              <hr />
+              <div className="py-10 px-20 flex items-center justify-between hover:bg-gray-600 text-white">
+                <Link href="/">Link 4</Link>
+              </div>
+              <hr />
+              <div className="py-10 px-20 flex items-center justify-between hover:bg-gray-600 text-white">
+                <Link href="/">Link 5</Link>
+              </div>
             </div>
           </div>
-        </div>
+        )}
       </nav>
     </div>
   );
