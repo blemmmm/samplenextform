@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react";
+import "@fortawesome/fontawesome-pro/css/all.min.css";
 import Link from "next/link";
 import Head from "next/head";
 
@@ -14,6 +15,7 @@ const Navigation = () => {
           <div className="flex items-center justify-between h-16">
             <div className="px-1">
               <div className="flex items-center justify-start text-white font-semibold">
+                <i className="far fa-bars" />
                 <div className="pl-5">Hello, Blessly!</div>
               </div>
             </div>
