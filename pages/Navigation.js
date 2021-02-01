@@ -39,7 +39,7 @@ const Navigation = () => {
         </div>
         {sidebar === true && (
           <div
-            className="transition ease-linear duration-1000"
+            className="transition ease-in duration-1000"
             onClick={() => set_sidebar(false)}
           >
             <div className="h-full fixed z-20 bg-gray-800 bg-opacity-75 left-0 p-2 w-64 shadow-md lg:shadow-lg overflow-y-auto">
