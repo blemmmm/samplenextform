@@ -1,20 +1,19 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { faBars } from "@fortawesome/pro-solid-svg-icons";
 import { useCallback, useState } from "react";
 import Link from "next/link";
-
-library.add(faBars);
+import Head from "next/head";
 
 const Navigation = () => {
   return (
     <div>
+      <Head>
+        <title>Home</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <nav className="bg-gray-800">
-        <div className="max-w-full px-2 sm:px-6 lg:px-8">
-          <div className="relative flex items-center justify-between h-16">
-            <div className="flex-1 flex items-center sm:items-stretch sm:justify-start">
-              <div className="flex-shrink-0 flex items-center font-semibold text-white">
-                <FontAwesomeIcon icon={faBars} />
+        <div className="max-w-full mx-auto px-2 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <div className="px-1">
+              <div className="flex items-center justify-start text-white font-semibold">
                 <div className="pl-5">Hello, Blessly!</div>
               </div>
             </div>
